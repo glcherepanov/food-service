@@ -7,12 +7,14 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from '../nav-menu/nav-menu.component';
 import { FoodListComponent } from '../food-list/food-list.component';
+import { UserListComponent } from '../user-list/user-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     FoodListComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -20,6 +22,7 @@ import { FoodListComponent } from '../food-list/food-list.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: FoodListComponent, pathMatch: 'full' },
+      { path: 'user-list', component: UserListComponent }
     ])
   ],
   providers: [],
