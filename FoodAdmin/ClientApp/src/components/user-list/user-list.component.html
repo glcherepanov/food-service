@@ -1,2 +1,21 @@
 <h1>Список пользователей:</h1>
 <p>Здесь будет список пользователей.</p>
+
+<p *ngIf="!users"><em>Loading...</em></p>
+
+<table class='table' *ngIf="users">
+  <thead>
+    <tr>
+      <th>Имя пользователя</th>
+      <th>Группа</th>
+      <th>Команда</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.group }}</td>
+      <td>{{ user.team }}</td>
+    </tr>
+  </tbody>
+</table>
